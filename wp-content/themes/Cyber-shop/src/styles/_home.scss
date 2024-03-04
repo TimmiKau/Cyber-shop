@@ -1,0 +1,41 @@
+$primary-color: #000; 
+$background-color: #FFF; 
+$banner-color:#211c24;
+$grey-color:#FaFaFa; 
+$second-color: #0c0c0cdc;
+.wp-block-group__inner-container {
+ .wp-block-image.size-large{
+    display: flex;
+    justify-content: center;
+    background-color: $banner-color;
+ }
+ 
+ #category-specific {
+   display: flex;
+   justify-content: center;
+   background-color: $grey-color;
+   
+   img {
+     max-width: 100%;
+     height: auto;
+   }
+ }
+
+ #products{
+   background-color:$background-color;
+ }
+ #small-banner{
+   display: flex;
+   justify-content: center;
+   background-color: $background-color;
+   img {
+      object-fit: cover;
+    }
+ }
+ #discount{
+   background-color:$background-color;
+ }
+ #banner-2{
+   background-color:$second-color;
+ }
+}
