@@ -18,7 +18,11 @@ add_action('wp_enqueue_scripts', 'baseTheme_enqueue');
 //This create the Menus tab in WP
 function baseTheme_init()
 {
-    $menu = array();
+    $menu = array(
+        'footer_services' => 'footer_services',
+        'footer_Assistance_to_the_buyer' => 'footer_Assistance_to_the_buyer',
+        'Footer_Social_Media' => 'Footer_Social_Media'
+    );
     register_nav_menus($menu);
 }
 
