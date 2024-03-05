@@ -1,0 +1,265 @@
+// I am thinking like this
+
+/* 
+
+Div.  {
+
+Div - Progress bar. Back and forth. 
+
+.Class 1  ( Activate display none/block with JS )
+.Class 2  ( Activate display none/block with JS )
+.Class 3  ( Activate display none/block with JS )
+
+
+Div nav .  the Buttons forward and back.
+} 
+
+<div class="address" id="progress_div">
+
+<img class="logo" src="http://Cyber-shop.test/wp-content/uploads/2024/03/Location.png" alt="">
+
+<div class="text"><p class="step">Step 1</p>
+<p class="name">Adress</p></div>
+</div>
+
+
+*/
+
+.woocommerce {
+  .checkout_holder {
+    width: 60%;
+    margin: auto;
+    h3#order_review_heading{
+      display: none;
+    }
+    .progress_bar {
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 70px auto 70px auto;
+
+      #progress_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .line {
+        height: 1px;
+        width: 10%;
+        background-color: transparent;
+        border-bottom: 2px dotted black;
+      }
+
+      img {
+        margin: 5px;
+      }
+
+      .text {
+        .step {
+          font-size: 14px;
+        }
+        .name {
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+
+      .deactivated {
+        filter: opacity(50%);
+        display: none;
+      }
+    }
+
+    .deactivated {
+      filter: opacity(50%);
+      display: none;
+    }
+
+    .content {
+      //Remove the message box
+      .woocommerce-additional-fields {
+        display: none;
+      }
+
+      #customer_details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 70px;
+        //Form input style
+        .woocommerce-billing-fields {
+          h3 {
+            display: none;
+          }
+
+          .woocommerce-billing-fields__field-wrapper {
+            p {
+              span {
+                input {
+                  padding: 0.8rem 2rem;
+                  border-radius: 10px;
+                  border: 1px solid rgb(223, 222, 222);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      #customer_details.deactivated {
+        filter: opacity(50%);
+        display: none;
+      }
+
+      h3#order_review_heading.shipping {
+        display: none;
+      }
+
+      .step2.shipping {
+        .shop_table {
+          border: none;
+
+          thead {
+            display: none;
+          }
+          tbody {
+            display: none;
+          }
+          tfoot {
+            tr {
+              th {
+                border: none;
+              }
+            }
+
+            .cart-subtotal {
+              display: none;
+            }
+
+            .woocommerce-shipping-totals {
+              display: flex;
+              flex-direction: column;
+
+              td {
+                border: none;
+                ul {
+                  li {
+                    border: 1px solid black;
+                    padding: 20px;
+                    border-radius: 10px;
+                  }
+                }
+              }
+            }
+
+            .order-total {
+              display: none;
+            }
+          }
+        }
+
+        #payment {
+          display: none;
+        }
+      }
+
+      #order_review.payment {
+        display: flex;
+        min-height: 700px;
+        width: 100%;
+        .shop_table {
+          width: 50%;
+          margin: 5px;
+
+          * {
+            border: none;
+          }
+
+          tbody {
+            tr.cart_item {
+              td.product-name {
+                display: flex;
+                align-items: center;
+                margin-top: 45px;
+
+                img {
+                  margin-right: 10px;
+                }
+              }
+
+              tr.product_total {
+                text-align: end;
+              }
+            }
+          }
+
+          tfoot {
+            .woocommerce-shipping-totals {
+              display: none;
+            }
+          }
+
+          .includes_tax{
+            display: none;
+          }
+        }
+
+        
+
+        //The main payment div
+        #payment {
+          width: 50%;
+          background-color: white;
+
+          ul {
+            li {
+              .payment_method_stripe {
+                fieldset#wc-stripe-cc-form::before {
+                  display: inline-block;
+                  content: url('http://Cyber-shop.test/wp-content/uploads/2024/03/Credit-Card-small.png');
+                  max-height: 20px;
+                  max-width: 10px;
+                }
+              }
+            }
+          }
+
+          .payment_box::before {
+            display: none;
+          }
+
+          .payment_box {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    .nav_buttons {
+      display: flex;
+      justify-content: end;
+      margin-bottom: 60px;
+
+      button {
+        background-color: black;
+        color: white;
+        padding: 1.7rem 7rem;
+        border: 1.5px solid black;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: normal;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      .back {
+        color: black;
+        background-color: white;
+      }
+    }
+  }
+}

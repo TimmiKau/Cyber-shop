@@ -48,3 +48,12 @@ add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_
 function woocommerce_custom_product_add_to_cart_text() {
     return __( 'Buy Now', 'woocommerce' );
 }
+
+add_filter( 'woocommerce_cart_item_name', 'product_image_review_order_checkout', 9999, 3 );
+  
+function product_image_review_order_checkout( $name, $cart_item, $cart_item_key ) {
+    if ( ! is_checkout() ) return $name;
+    $product = $cart_item['data'];
+    $thumbnail = $product->get_image( array( '50', '50' ), array( 'class' => 'alignleft' ) );
+    return $thumbnail . $name;
+}
