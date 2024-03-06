@@ -1,0 +1,232 @@
+//Thins to fix
+//Remove button
+//margin/alignment for the cart and total
+//order quantiy arrows
+
+//Controls all un controlled values
+
+//Cart
+
+//Colors
+$Main-color: #000000;
+$Sec-color: rgb(255, 255, 255);
+
+//Font
+$font: 'Poppins', sans-serif;
+
+//Cart Total
+$font-size-big: 15px;
+$font-size-medium: 12px;
+$font-size-small: 10px;
+
+//color
+$font-color: #000000;
+$font-second-color: #9f9f9f;
+
+//Thins to fix
+//Remove button
+//margin/alignment for the cart and total
+//order quantiy arrows
+
+//Controls all un controlled values
+* {
+  font-family: $font;
+  //font-size: $font-size-medium;
+  text-decoration: none;
+}
+
+.hold {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  align-items: unset;
+  .cart-collaterals {
+    width: 40%;
+    margin: 40px;
+    margin-top: 0;
+    .cart_totals {
+      width: 100%;
+    }
+  }
+
+  .woocommerce-notices-wrapper {
+    display: none;
+  }
+
+  .woocommerce-cart-form {
+    margin-top:32px;
+    width: 60%;
+    background-color: transparent;
+
+    td.product-thumbnail {
+      a {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    //List of products
+    .shop_table {
+      td.product-thumbnail {
+        display: block;
+        height: 100px;
+        a {
+          img {
+            height: 106px;
+            width: 106px;
+          }
+        }
+      }
+
+      //Change font title-bar
+      .product-thumbnail,
+      .product-name,
+      .product-price,
+      .product-quantity,
+      .product-subtotal {
+        font-size: $font-size-medium;
+        font-weight: bold;
+        padding: 9px 0px;
+      }
+
+      .woocommerce-cart-form__cart-item {
+        td.product-remove {
+          position: relative;
+        }
+
+        .quantity {
+          display: flex;
+          justify-content: start;
+          margin-left: 16px;
+
+          .qty {
+            width: 1.6em;
+          }
+        }
+
+        input[type='number'] {
+          -webkit-appearance: textfield;
+          -moz-appearance: textfield;
+          appearance: textfield;
+        }
+
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+        }
+
+        a.remove {
+          text-indent: -9999px;
+          border: 0;
+        }
+
+        a.remove:hover {
+          display: none;
+        }
+        a.remove:before {
+          content: '';
+          position: absolute;
+          left: 25%;
+          width: 15px;
+          height: 15px;
+          background-image: url('http://uppgift7.test/wp-content/uploads/2024/02/bin.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        .product-name,
+        .product-price {
+          color: $font-second-color;
+          a {
+            text-decoration: none;
+            color: $font-second-color;
+          }
+        }
+        .product-subtotal {
+          font-weight: lighter;
+        }
+      }
+
+      .actions {
+        visibility: hidden;
+        height: 70px;
+      }
+
+      thead {
+        background-color: $Sec-color;
+      }
+    }
+  }
+
+  //Price box div
+  .cart-collaterals {
+    padding: 10px;
+    padding-bottom: 40px;
+    background-color: $Sec-color;
+    border-radius: 0px;
+
+    .cart_totals {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+
+      //Text: Cart Totals
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      table.shop_table {
+        position: relative;
+        .cart-subtotal {
+          th {
+            font-size: $font-size-medium;
+          }
+
+          //Price
+          td {
+            color: #9f9f9f;
+            font-size: $font-size-medium;
+            position: absolute;
+            right: 2rem;
+          }
+        }
+
+        .order-total {
+          //Name / Total
+          th {
+            border-top: none;
+            font-size: $font-size-medium;
+          }
+
+          //Price
+          td {
+            .woocommerce-Price-amount {
+              color: #000000;
+              font-size: $font-size-big;
+            }
+          }
+        }
+      }
+
+      .wc-proceed-to-checkout {
+    
+
+        a {
+            background-color: black;
+            color: white;
+            padding: 1.7rem 7rem;
+            border: 1.5px solid black;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: normal;
+            margin: 10px;
+            cursor: pointer;
+        }
+      }
+    }
+  }
+}

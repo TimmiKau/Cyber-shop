@@ -21,7 +21,8 @@ function baseTheme_init()
     $menu = array(
         'footer_services' => 'footer_services',
         'footer_Assistance_to_the_buyer' => 'footer_Assistance_to_the_buyer',
-        'Footer_Social_Media' => 'Footer_Social_Media'
+        'Footer_Social_Media' => 'Footer_Social_Media',
+        'main_nav' => 'main_nav'
     );
     register_nav_menus($menu);
 }

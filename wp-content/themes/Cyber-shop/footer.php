@@ -34,13 +34,13 @@
 </div>
 <div class="column"><span class="category"> Services </span><?php
         
-        // Define parameters for the navigation menu
-                $menu = array(
-                    'theme_location' => 'footer_information',
-                    'menu_id' => 'footer_information',
-                    'container' => 'nav',
-                    'container_class' => 'menu'
-                );
+    // Define parameters for the navigation menu
+    $menu = array(
+        'theme_location' => 'main_nav',
+        'menu_id' => 'main_nav',
+        'container' => 'nav',
+        'container_class' => 'menu'
+    );
         
         // Generate and display the navigation menu
                 wp_nav_menu($menu);
@@ -50,13 +50,13 @@
         
 <?php
         
-        // Define parameters for the navigation menu
-                $menu = array(
-                    'theme_location' => 'footer_information',
-                    'menu_id' => 'footer_information',
-                    'container' => 'nav',
-                    'container_class' => 'menu'
-                );
+     // Define parameters for the navigation menu
+     $menu = array(
+        'theme_location' => 'main_nav',
+        'menu_id' => 'main_nav',
+        'container' => 'nav',
+        'container_class' => 'menu'
+    );
         
         // Generate and display the navigation menu
                 wp_nav_menu($menu);

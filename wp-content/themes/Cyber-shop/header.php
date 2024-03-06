@@ -22,20 +22,35 @@
     <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
         <label>
             <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
-            <input type="search" class="search-field" placeholder="Search" value="<?php echo get_search_query() ?>" name="s" style="background-image: url('<?php echo content_url('uploads/2024/02/Search.png'); ?>');">
+            <input type="search" class="search-field" placeholder="" value="<?php echo get_search_query() ?>" name="s" style="background-image: url('<?php echo content_url('uploads/2024/02/Search.png'); ?>');">
         </label>
     </form>
 </div>
 
 
+      
+
+
         <nav id="site-navigation" class="main-navigation" role="navigation">
-            <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'primary', 
-                    'menu_id'        => 'primary-menu',
-                ));
-            ?>
+        <?php
+        
+        // Define parameters for the navigation menu
+                $menu = array(
+                    'theme_location' => 'main_nav',
+                    'menu_id' => 'main_nav',
+                    'container' => 'nav',
+                    'container_class' => 'menu'
+                );
+        
+        // Generate and display the navigation menu
+                wp_nav_menu($menu);
+                ?>
         </nav>
+
+
+
+   
+
 
         <div class="header-icons">
             <a href="/wishlist" class="wishlist-link">
