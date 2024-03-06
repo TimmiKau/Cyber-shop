@@ -13,7 +13,7 @@
 <header id="masthead" class="site-header" role="banner">
     <div class="header-inner">
         <div class="site-branding">
-            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+             <a href="<?php echo esc_url(home_url('/'));?>" rel="home">  
                 <img src="<?php echo content_url('/uploads/2024/02/Logo.png'); ?>" alt="<?php bloginfo('name'); ?>" />
             </a>
         </div>

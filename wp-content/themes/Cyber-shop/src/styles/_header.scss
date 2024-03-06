@@ -20,7 +20,6 @@ body {
     font-size: $font-size;
 }
 
-
 .site-header {
   background-color: $background-color;
   padding: 0 20px; 
@@ -29,21 +28,16 @@ body {
   justify-content: center;
   align-items: center;
   font-family: $font-family;
-  
+  width: 80%;
+  margin: auto;
+
   .header-inner {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%; 
-    max-width: 1200px; 
-  }
 
-  .site-header .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  }
 
 .site-branding, .header-search, .main-navigation, .header-icons {
     display: flex;
@@ -52,7 +46,7 @@ body {
 
 .header-search {
     display: flex;
-    margin-left: 5%;
+    margin-left: 10%;
     align-items: center;
     position: relative;
 }
@@ -79,6 +73,7 @@ body {
     display: flex;
     justify-content: center;
     flex-grow: 1; 
+    
 
     ul {
       list-style: none;
@@ -86,13 +81,13 @@ body {
       display: flex;
       gap: 20px; 
       margin: 0 20px; 
-
+      
       li a {
         color: $link-color;
         opacity: 0.3; 
         text-decoration: none;
         font-weight: 600;
-
+        
         &:hover {
           text-decoration: underline;
         }
@@ -139,27 +134,41 @@ body {
 
 .site-branding img {
   height: auto; 
-  max-height: 80px; 
   width: auto; 
-  margin-left: 30%
 }
-
 .cart-items-count{
     color: $primary-color;
 }
 
+.site-header, .sub-navigation {
+  padding: 0 10%; 
+  width: 100%; 
+  margin: auto; 
+}
+
+.site-header {
+  background-color: $background-color;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family;
+
+}
+
 .sub-navigation {
   display: flex;
-  justify-content: space-between; 
-  align-items: center;
+  justify-content: center;
   background-color: $primary-color;
   height: 40px;
 
   .sub-navigation-item {
     display: flex;
     align-items: center;
-    justify-content: center; 
-  
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+
     .category-image {
       margin-right: 10px; 
     }
@@ -168,15 +177,5 @@ body {
       color: $grey-color;
       text-decoration: none;
     }
-  }
-
-  .sub-navigation-item:first-child {
-    margin-left: 20%; 
-    justify-content: flex-start;
-  }
-
-  .sub-navigation-item:last-child {
-    margin-right: 20%; 
-    justify-content: flex-end;
   }
 }
