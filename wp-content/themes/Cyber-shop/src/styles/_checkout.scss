@@ -27,17 +27,19 @@ Div nav .  the Buttons forward and back.
 
 .woocommerce {
   .checkout_holder {
-    width: 60%;
+    width: 70%;
     margin: auto;
-    h3#order_review_heading{
+    h3#order_review_heading {
       display: none;
     }
     .progress_bar {
-      width: 80%;
+      width: 100%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       align-items: center;
-      margin: 70px auto 70px auto;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 70px;
 
       #progress_div {
         display: flex;
@@ -47,7 +49,7 @@ Div nav .  the Buttons forward and back.
 
       .line {
         height: 1px;
-        width: 10%;
+        width: 10rem;
         background-color: transparent;
         border-bottom: 2px dotted black;
       }
@@ -78,6 +80,8 @@ Div nav .  the Buttons forward and back.
     }
 
     .content {
+    
+
       //Remove the message box
       .woocommerce-additional-fields {
         display: none;
@@ -121,6 +125,8 @@ Div nav .  the Buttons forward and back.
 
       .step2.shipping {
         .shop_table {
+          width: 100%;
+          margin: auto;
           border: none;
 
           thead {
@@ -203,12 +209,10 @@ Div nav .  the Buttons forward and back.
             }
           }
 
-          .includes_tax{
+          .includes_tax {
             display: none;
           }
         }
-
-        
 
         //The main payment div
         #payment {
@@ -238,7 +242,9 @@ Div nav .  the Buttons forward and back.
         }
       }
     }
-
+    #place_order {
+      display: none;
+    }
     .nav_buttons {
       display: flex;
       justify-content: end;
@@ -259,6 +265,10 @@ Div nav .  the Buttons forward and back.
       .back {
         color: black;
         background-color: white;
+      }
+      .next.deactivated,
+      .pay.deactivated {
+        display: none;
       }
     }
   }

@@ -108,6 +108,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 <button class="back" id="btn_back">Back</button>
 <button class="next" id="btn_next">Next</button>
+<button class="pay deactivated" id="btn_pay">Pay</button>
 
 
 </div>
